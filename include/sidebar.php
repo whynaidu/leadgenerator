@@ -32,7 +32,7 @@ $companyname=$_SESSION['companyname'];
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="pages/icons/mdi.html">
+            <a class="nav-link" href="customize.php">
                 <span class="menu-title">Customize Form</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
             </a>

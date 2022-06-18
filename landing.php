@@ -32,7 +32,7 @@
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="page-header">
-                        <h3 class="page-title">Customize Form</h3>
+                        <h3 class="page-title">Leads </h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
@@ -44,18 +44,13 @@
                         <div class="col-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
+                                    <h4 class="card-title">Basic form elements</h4>
+                                    <p class="card-description"> Basic form elements </p>
                                     <form class="forms-sample">
-                                        <div class="row">
-                                            <div class="form-group col-6">
-                                                <label for="exampleInputName1">Title To Display</label>
-                                                <input type="text" class="form-control" id="exampleInputName1"
-                                                    placeholder="Name">
-                                            </div>
-                                            <div class="form-group col-6">
-                                                <label for="exampleInputName1">Small Discription to Display</label>
-                                                <input type="text" class="form-control" id="exampleInputName1"
-                                                    placeholder="Name">
-                                            </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputName1">Name</label>
+                                            <input type="text" class="form-control" id="exampleInputName1"
+                                                placeholder="Name">
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleInputEmail3">Email address</label>

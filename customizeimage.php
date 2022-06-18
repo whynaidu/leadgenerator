@@ -47,14 +47,88 @@
                                     <form class="forms-sample">
                                         <div class="row">
                                             <div class="form-group col-6">
-                                                <label for="exampleInputName1">Title To Display</label>
+                                                <label for="exampleInputName1">Name of Company</label>
                                                 <input type="text" class="form-control" id="exampleInputName1"
                                                     placeholder="Name">
                                             </div>
                                             <div class="form-group col-6">
-                                                <label for="exampleInputName1">Small Discription to Display</label>
-                                                <input type="text" class="form-control" id="exampleInputName1"
-                                                    placeholder="Name">
+                                                <label>Logo</label>
+                                                <input type="file" name="img[]" class="file-upload-default">
+                                                <div class="input-group col-xs-12">
+                                                    <input type="text" class="form-control file-upload-info" disabled
+                                                        placeholder="Upload Image">
+                                                    <span class="input-group-append">
+                                                        <button class="file-upload-browse btn btn-gradient-primary"
+                                                            type="button">Upload</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group col-6">
+                                                <label>Upload Gallery Image-1</label>
+                                                <input type="file" name="img[]" class="file-upload-default">
+                                                <div class="input-group col-xs-12">
+                                                    <input type="text" class="form-control file-upload-info" disabled
+                                                        placeholder="Upload Image">
+                                                    <span class="input-group-append">
+                                                        <button class="file-upload-browse btn btn-gradient-primary"
+                                                            type="button">Upload</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-6">
+                                                <img src="#">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-4">
+                                                <img src="#">
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <img src="#">
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <img src="#">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-4">
+                                                <label>Upload Background Image-1</label>
+                                                <input type="file" name="img[]" class="file-upload-default">
+                                                <div class="input-group col-xs-12">
+                                                    <input type="text" class="form-control file-upload-info" disabled
+                                                        placeholder="Upload Image">
+                                                    <span class="input-group-append">
+                                                        <button class="file-upload-browse btn btn-gradient-primary"
+                                                            type="button">Upload</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <label>Upload Gallery Image-2</label>
+                                                <input type="file" name="img[]" class="file-upload-default">
+                                                <div class="input-group col-xs-12">
+                                                    <input type="text" class="form-control file-upload-info" disabled
+                                                        placeholder="Upload Image">
+                                                    <span class="input-group-append">
+                                                        <button class="file-upload-browse btn btn-gradient-primary"
+                                                            type="button">Upload</button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-4">
+                                                <label>Upload Gallery Image-3</label>
+                                                <input type="file" name="img[]" class="file-upload-default">
+                                                <div class="input-group col-xs-12">
+                                                    <input type="text" class="form-control file-upload-info" disabled
+                                                        placeholder="Upload Image">
+                                                    <span class="input-group-append">
+                                                        <button class="file-upload-browse btn btn-gradient-primary"
+                                                            type="button">Upload</button>
+                                                    </span>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group">

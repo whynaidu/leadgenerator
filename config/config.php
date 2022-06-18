@@ -1,8 +1,8 @@
 <?php
-$host="localhost";// Host name
-$user="root"; // Mysql username
-$pass=""; // Mysql password
-$db="leadgenerator"; // Database name
+$host="151.106.124.51";// Host name
+$user="u188140722_leadgenerator"; // Mysql username
+$pass="Admin@123"; // Mysql password
+$db="u188140722_leadgenerator"; // Database name
 
 
 $conn=mysqli_connect($host,$user,$pass,$db);

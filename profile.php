@@ -1,13 +1,14 @@
 <?php
-include"config/config.php";
-
+include"config/config.php"; 
+$sql="SELECT * FROM `user` WHERE `id`='$loginid'";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_assoc($result);
 if(!isset($loginid)){
     header("location:index.html");
-}
- if(($admin)==0){
-  header("location:dashboard.php");
-}
+}        
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +16,7 @@ if(!isset($loginid)){
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Customize-Lead Generator</title>
+    <title>Profile-Lead Generator</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
@@ -46,11 +47,11 @@ if(!isset($loginid)){
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="page-header">
-                        <h3 class="page-title">Customize Form</h3>
+                        <h3 class="page-title">Profile</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="dashboard.php">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Customize Form</li>
+                                <li class="breadcrumb-item active" aria-current="page">Profile</li>
                             </ol>
                         </nav>
                     </div>
@@ -58,31 +59,34 @@ if(!isset($loginid)){
                         <div class="col-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <form class="forms-sample">
-                                        <div class="row">
-                                            <div class="form-group col-6">
-                                                <label for="exampleInputName1">Title To Display</label>
-                                                <input type="text" class="form-control" id="exampleInputName1"
-                                                    placeholder="Name">
-                                            </div>
-                                            <div class="form-group col-6">
-                                                <label for="exampleInputName1">Small Discription to Display</label>
-                                                <input type="text" class="form-control" id="exampleInputName1"
-                                                    placeholder="Name">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleInputEmail3">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail3"
-                                                placeholder="Email">
-                                        </div>  
-                                        <div class="form-group">
-                                            <label for="exampleTextarea1">Textarea</label>
-                                            <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-                                        </div>
-                                 <a href="customizeimage.php"><button class="btn btn-light">Next</button></a>
-                                 <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                                    <form class="forms-sample" action="api.php" method="POST" enctype="multipart/form-data">
+                                        <div class="row1"style="text-align:center;">
+                                       
+                                         <div class="col-md-12">
+                                          <img src="assets/images/<?php echo $row['image'];?>" value="<?php echo $row['image'];?>" class="btn-gradient-primary" style="border-radius:50%; border:5px solid #9a55ff; height:220px; width:230px;" alt="profile">
 
+                                        </div>
+                                        
+                                        <div class="row1"style="text-align:center;">
+                                        <label for="file-upload" style="width: max-content;margin: 15px;">
+                                            <i class="mdi mdi-grease-pencil">Change Profile </i>
+                                        </label>
+                                        <input id="file-upload" style="display:none;" type="file" name="profile"> 
+                                        </div>                               
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail3">Name</label>
+                                            <input type="text" class="form-control" name="name" value="<?php echo $row['name'] ?>" placeholder="Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword4">Company</label>
+                                            <input type="text" class="form-control" name="companyname" value="<?php echo $row['companyname'] ?>" placeholder="Company">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleSelectGender">Eamil</label>
+                                            <input type="text" class="form-control" value="<?php echo $row['email'] ?>" readonly placeholder="Email">
+                                        </div>
+                                        <button type="submit" class="btn btn-gradient-primary me-2" name="profileupdate">Update</button>
                                     </form>
                                 </div>
                             </div>

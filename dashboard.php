@@ -1,3 +1,10 @@
+<?php
+include"config/config.php";
+ if(!isset($loginid)){
+     header("location:index.html");
+ }
+ 
+?>
 <!DOCTYPE html>
 <html lang="en">
 

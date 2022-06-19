@@ -1,7 +1,7 @@
 <?php
-include"config/config.php";
-
-session_start();
+$sql="SELECT * FROM `user` WHERE `id`='$loginid'";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_assoc($result);
 $name=$_SESSION['name'];
 
 
@@ -22,7 +22,7 @@ $name=$_SESSION['name'];
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <div class="nav-profile-img">
-                        <img src="assets/images/faces/face1.jpg" alt="image">
+                        <img src="assets/images/<?php echo $row['image']?>" alt="image">
                         <span class="availability-status online"></span>
                     </div>
                     <div class="nav-profile-text">

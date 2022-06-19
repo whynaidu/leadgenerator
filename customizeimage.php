@@ -1,3 +1,13 @@
+<?php
+include"config/config.php";
+
+if(!isset($loginid)){
+    header("location:index.html");
+}
+ if(($admin)==0){
+  header("location:dashboard.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,7 +180,7 @@
                                             <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
-                                        <button class="btn btn-light">Cancel</button>
+                                        <a href="customize.php"><button class="btn btn-light">Back</button></a>
                                     </form>
                                 </div>
                             </div>

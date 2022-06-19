@@ -1,14 +1,13 @@
 <?php
-include"config/config.php";
-$name=$_SESSION['name'];
-$companyname=$_SESSION['companyname'];
-?>
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+$sql="SELECT * FROM `user` WHERE `id`='$loginid'";
+$result=mysqli_query($conn,$sql);
+$row=mysqli_fetch_assoc($result);
+?><nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item nav-profile">
             <a href="#" class="nav-link">
                 <div class="nav-profile-image">
-                    <img src="assets/images/faces/face1.jpg" alt="profile">
+                    <img src="assets/images/<?php echo $row['image']?>" alt="profile">
                     <span class="login-status online"></span>
                     <!--change to offline or busy as needed-->
                 </div>
@@ -31,14 +30,22 @@ $companyname=$_SESSION['companyname'];
                 <i class="mdi mdi-chart-bar menu-icon"></i>
             </a>
         </li>
+        <?php
+        if(($admin)==1){
+
+?>
         <li class="nav-item">
             <a class="nav-link" href="customize.php">
                 <span class="menu-title">Customize Form</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
             </a>
         </li>
+        <?php }else if(($admin)==0){ ?>
+
+
+           <?php } ?>
         <li class="nav-item">
-            <a class="nav-link" href="pages/icons/mdi.html">
+            <a class="nav-link" href="profile.php">
                 <span class="menu-title">Profile</span>
                 <i class="mdi mdi-contacts menu-icon"></i>
             </a>
@@ -52,3 +59,10 @@ $companyname=$_SESSION['companyname'];
 
     </ul>
 </nav>
+
+
+
+
+
+
+
